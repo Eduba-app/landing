@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Eduba Privacy Policy — how we collect, use, and protect your information." />
+  <title>Privacy Policy — Eduba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal: #1a7a6e;
+      --teal-dark: #0f4d45;
+      --teal-mid: #156b61;
+      --orange: #e07b3a;
+      --text: #1a1f1e;
+      --text-muted: #5c6664;
+      --bg: #f4f8f7;
+      --white: #ffffff;
+      --radius: 16px;
+      --radius-lg: 24px;
+      --shadow: 0 12px 40px rgba(26, 122, 110, 0.12);
+      --font: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(780px, 100% - 2rem);
+      margin-inline: auto;
+    }
+
+    /* Top bar */
+    .topbar {
+      background: linear-gradient(155deg, var(--teal) 0%, var(--teal-mid) 45%, var(--teal-dark) 100%);
+      color: #fff;
+      padding: 1rem 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .topbar-logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .topbar-back {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s;
+    }
+
+    .topbar-back:hover { color: #fff; text-decoration: none; }
+
+    /* Page hero */
+    .page-hero {
+      background: linear-gradient(155deg, var(--teal) 0%, var(--teal-mid) 45%, var(--teal-dark) 100%);
+      color: #fff;
+      padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(3rem, 7vw, 5rem);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .page-hero-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 2.75rem);
+      font-weight: 800;
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .page-hero-meta {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin: 0;
+    }
+
+    /* Content card */
+    .content-wrap {
+      padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(3rem, 6vw, 5rem);
+    }
+
+    .content-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.75rem, 4vw, 3rem);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(26, 122, 110, 0.08);
+    }
+
+    .toc {
+      background: rgba(26, 122, 110, 0.05);
+      border: 1px solid rgba(26, 122, 110, 0.15);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .toc-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin: 0 0 0.75rem;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 1.25rem;
+      display: grid;
+      gap: 0.3rem;
+    }
+
+    .toc li { font-size: 0.88rem; }
+
+    .toc a {
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover { color: var(--teal); text-decoration: none; }
+
+    .section-block {
+      margin-bottom: 2.25rem;
+      scroll-margin-top: 80px;
+    }
+
+    .section-block:last-child { margin-bottom: 0; }
+
+    .section-block h2 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--teal-dark);
+      margin: 0 0 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-mid) 100%);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .section-block p {
+      margin: 0 0 0.85rem;
+      font-size: 0.95rem;
+      color: #2e3533;
+    }
+
+    .section-block p:last-child { margin-bottom: 0; }
+
+    .section-block ul {
+      margin: 0 0 0.85rem;
+      padding-left: 1.35rem;
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .section-block ul li {
+      font-size: 0.92rem;
+      color: #2e3533;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(26, 122, 110, 0.1);
+      margin: 2rem 0;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, rgba(26, 122, 110, 0.07) 0%, rgba(26, 122, 110, 0.03) 100%);
+      border: 1px solid rgba(26, 122, 110, 0.18);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .contact-box p {
+      margin: 0 0 0.5rem;
+      font-size: 0.93rem;
+      color: #2e3533;
+    }
+
+    .contact-box p:last-child { margin-bottom: 0; }
+
+    .contact-box strong { color: var(--teal-dark); }
+
+    /* Footer */
+    .footer {
+      padding: 2rem 0 2.5rem;
+      border-top: 1px solid rgba(26, 122, 110, 0.12);
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--teal);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .footer strong { color: var(--text); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar" aria-label="Site navigation">
+    <div class="container topbar-inner">
+      <a href="index.html" class="topbar-logo">Eduba</a>
+      <a href="index.html" class="topbar-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        Back to home
+      </a>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="page-hero-badge">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p class="page-hero-meta">Last updated: June 3, 2026 &nbsp;·&nbsp; Effective date: June 3, 2026</p>
+    </div>
+  </header>
+
+  <main class="content-wrap">
+    <div class="container">
+      <div class="content-card">
+
+        <nav class="toc" aria-label="Table of contents">
+          <p class="toc-title">Contents</p>
+          <ol>
+            <li><a href="#s1">Information We Collect</a></li>
+            <li><a href="#s2">How We Use Your Information</a></li>
+            <li><a href="#s3">Information Sharing</a></li>
+            <li><a href="#s4">Data Storage &amp; Security</a></li>
+            <li><a href="#s5">Your Choices &amp; Rights</a></li>
+            <li><a href="#s6">Children's Privacy</a></li>
+            <li><a href="#s7">Third-Party Services</a></li>
+            <li><a href="#s8">In-App Purchases &amp; Subscriptions</a></li>
+            <li><a href="#s9">Changes to This Policy</a></li>
+            <li><a href="#s10">Contact Us</a></li>
+          </ol>
+        </nav>
+
+        <p style="font-size:0.95rem;color:#2e3533;margin:0 0 2rem;">
+          Welcome to <strong>Eduba</strong> ("we," "us," or "our"). We built Eduba to be a focused, privacy-respecting learning app. This Privacy Policy explains what information we collect when you use the Eduba mobile application, how we use it, and your choices. By using Eduba you agree to the practices described here.
+        </p>
+
+        <div class="section-block" id="s1">
+          <h2><span class="section-num">1</span> Information We Collect</h2>
+          <p><strong>Account information.</strong> When you create an account we collect your name, email address, and the password you choose (stored securely, never in plain text).</p>
+          <p><strong>Usage data.</strong> We automatically collect information about how you interact with the app — books you open, flashcard sessions, streak activity, and features you use — to power your progress tracking and personalized review schedule.</p>
+          <p><strong>Device &amp; technical data.</strong> We collect basic device information (device model, OS version, app version, language setting) and anonymized crash/error reports to keep the app stable.</p>
+          <p><strong>Purchase data.</strong> If you subscribe or make an in-app purchase, the transaction is processed by Apple App Store or Google Play. We receive a confirmation and subscription status, but never your full payment card details.</p>
+          <p><strong>Support communications.</strong> If you contact us via email or WhatsApp, we keep that conversation to resolve your issue.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="s2">
+          <h2><span class="section-num">2</span> How We Use Your Information</h2>
+          <ul>
+            <li>Provide, operate, and maintain the Eduba app and its features.</li>
+            <li>Sync your library, flashcards, and progress across your devices.</li>
+            <li>Send you review reminders and streak notifications (you can turn these off in Settings).</li>
+            <li>Process subscriptions and manage access to premium content.</li>
+            <li>Diagnose technical problems and improve app performance.</li>
+            <li>Respond to support requests and feedback.</li>
+            <li>Comply with legal obligations.</li>
+          </ul>
+          <p>We do <strong>not</strong> sell your personal data, use it for advertising profiling, or share it with data brokers.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="s3">
+          <h2><span class="section-num">3</span> Information Sharing</h2>
+          <p>We only share your data in these limited circumstances:</p>
+          <ul>
+            <li><strong>Service providers:</strong> Trusted third-party services that help us operate the app (e.g., cloud hosting, authentication, analytics). They may only process your data to provide services to us and are bound by confidentiality agreements.</li>
+            <li><strong>App stores:</strong> Apple and Google process payments and may receive usage data per their own privacy policies.</li>
+            <li><strong>Legal requirements:</strong> We may disclose information if required by law, court order, or to protect the safety of our users or the public.</li>
+            <li><strong>Business transfers:</strong> If Eduba is acquired or merged, your data may transfer as part of that transaction. We will notify you via email or in-app notice before that happens.</li>
+          </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="s4">
+          <h2><span class="section-num">4</span> Data Storage &amp; Security</h2>
+          <p>Your data is stored on secure cloud servers. We apply industry-standard measures including encryption in transit (TLS) and at rest to protect your information.</p>
+          <p>No system is 100% secure. If a data breach occurs that affects your rights, we will notify you as required by applicable law.</p>
+          <p>We retain your data for as long as your account is active or as needed to provide services. You may request deletion at any time (see Section 5).</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="s5">
+          <h2><span class="section-num">5</span> Your Choices &amp; Rights</h2>
+          <p>Depending on your location, you may have the right to:</p>
+          <ul>
+            <li><strong>Access</strong> the personal data we hold about you.</li>
+            <li><strong>Correct</strong> inaccurate or incomplete data.</li>
+            <li><strong>Delete</strong> your account and associated data.</li>
+            <li><strong>Export</strong> your data in a portable format.</li>
+            <li><strong>Opt out</strong> of push notifications at any time via your device settings.</li>
+          </ul>
+          <p>To exercise any of these rights, contact us at the details in Section 10. We will respond within 30 days.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="s6">
+          <h2><span class="section-num">6</span> Children's Privacy</h2>
+          <p>Eduba is not directed to children under the age of 13 (or under 16 in the European Economic Area). We do not knowingly collect personal information from children. If you believe a child has provided us with their data, please contact us immediately and we will delete it promptly.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="s7">
+          <h2><span class="section-num">7</span> Third-Party Services</h2>
+          <p>The app integrates with third-party services such as:</p>
+          <ul>
+            <li>Apple App Store &amp; Google Play (purchases and distribution)</li>
+            <li>Cloud infrastructure providers (data hosting)</li>
+            <li>Analytics tools (anonymized crash reporting)</li>
+          </ul>
+          <p>Each of these has its own privacy policy. We encourage you to review them. We are not responsible for the privacy practices of third parties outside our control.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="s8">
+          <h2><span class="section-num">8</span> In-App Purchases &amp; Subscriptions</h2>
+          <p>Eduba offers optional subscriptions to unlock premium content and features. All billing is handled by Apple or Google through their respective stores. We do not store or have access to your full payment details.</p>
+          <p>Subscription management, cancellation, and refund requests must be handled directly through the App Store or Google Play according to their policies.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="s9">
+          <h2><span class="section-num">9</span> Changes to This Policy</h2>
+          <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top and, for material changes, notify you via in-app notice or email. Continued use of Eduba after changes take effect means you accept the updated policy.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="s10">
+          <h2><span class="section-num">10</span> Contact Us</h2>
+          <p>If you have questions about this Privacy Policy or want to exercise your data rights, reach out to us:</p>
+          <div class="contact-box">
+            <p><strong>Eduba Support</strong></p>
+            <p>📧 Email: <a href="mailto:m.j.h.a.e.w@gmail.com">m.j.h.a.e.w@gmail.com</a></p>
+            <p>💬 WhatsApp: <a href="https://wa.me/9647841353732">+964 784 135 3732</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html" aria-current="page">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      </div>
+      <p><strong>Eduba</strong> · Flashcard learning with a built-in bookstore</p>
+      <p>&copy; <span id="year"></span> Eduba. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

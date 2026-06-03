@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Eduba Terms and Conditions — rules governing your use of the app." />
+  <title>Terms &amp; Conditions — Eduba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal: #1a7a6e;
+      --teal-dark: #0f4d45;
+      --teal-mid: #156b61;
+      --orange: #e07b3a;
+      --text: #1a1f1e;
+      --text-muted: #5c6664;
+      --bg: #f4f8f7;
+      --white: #ffffff;
+      --radius: 16px;
+      --radius-lg: 24px;
+      --shadow: 0 12px 40px rgba(26, 122, 110, 0.12);
+      --font: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(780px, 100% - 2rem);
+      margin-inline: auto;
+    }
+
+    /* Top bar */
+    .topbar {
+      background: linear-gradient(155deg, var(--teal) 0%, var(--teal-mid) 45%, var(--teal-dark) 100%);
+      color: #fff;
+      padding: 1rem 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .topbar-logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .topbar-back {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s;
+    }
+
+    .topbar-back:hover { color: #fff; text-decoration: none; }
+
+    /* Page hero */
+    .page-hero {
+      background: linear-gradient(155deg, var(--teal) 0%, var(--teal-mid) 45%, var(--teal-dark) 100%);
+      color: #fff;
+      padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(3rem, 7vw, 5rem);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .page-hero-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 2.75rem);
+      font-weight: 800;
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .page-hero-meta {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin: 0;
+    }
+
+    /* Content card */
+    .content-wrap {
+      padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(3rem, 6vw, 5rem);
+    }
+
+    .content-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.75rem, 4vw, 3rem);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(26, 122, 110, 0.08);
+    }
+
+    .toc {
+      background: rgba(26, 122, 110, 0.05);
+      border: 1px solid rgba(26, 122, 110, 0.15);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .toc-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin: 0 0 0.75rem;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 1.25rem;
+      display: grid;
+      gap: 0.3rem;
+    }
+
+    .toc li { font-size: 0.88rem; }
+
+    .toc a {
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover { color: var(--teal); text-decoration: none; }
+
+    .section-block {
+      margin-bottom: 2.25rem;
+      scroll-margin-top: 80px;
+    }
+
+    .section-block:last-child { margin-bottom: 0; }
+
+    .section-block h2 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--teal-dark);
+      margin: 0 0 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--orange) 0%, #c96a30 100%);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .section-block p {
+      margin: 0 0 0.85rem;
+      font-size: 0.95rem;
+      color: #2e3533;
+    }
+
+    .section-block p:last-child { margin-bottom: 0; }
+
+    .section-block ul {
+      margin: 0 0 0.85rem;
+      padding-left: 1.35rem;
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .section-block ul li {
+      font-size: 0.92rem;
+      color: #2e3533;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(26, 122, 110, 0.1);
+      margin: 2rem 0;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(224, 123, 58, 0.08) 0%, rgba(224, 123, 58, 0.03) 100%);
+      border: 1px solid rgba(224, 123, 58, 0.25);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.35rem;
+      margin: 1rem 0;
+      font-size: 0.92rem;
+      color: #2e3533;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, rgba(26, 122, 110, 0.07) 0%, rgba(26, 122, 110, 0.03) 100%);
+      border: 1px solid rgba(26, 122, 110, 0.18);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .contact-box p {
+      margin: 0 0 0.5rem;
+      font-size: 0.93rem;
+      color: #2e3533;
+    }
+
+    .contact-box p:last-child { margin-bottom: 0; }
+
+    .contact-box strong { color: var(--teal-dark); }
+
+    /* Footer */
+    .footer {
+      padding: 2rem 0 2.5rem;
+      border-top: 1px solid rgba(26, 122, 110, 0.12);
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--teal);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .footer strong { color: var(--text); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar" aria-label="Site navigation">
+    <div class="container topbar-inner">
+      <a href="index.html" class="topbar-logo">Eduba</a>
+      <a href="index.html" class="topbar-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        Back to home
+      </a>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="page-hero-badge">Legal</span>
+      <h1>Terms &amp; Conditions</h1>
+      <p class="page-hero-meta">Last updated: June 3, 2026 &nbsp;·&nbsp; Effective date: June 3, 2026</p>
+    </div>
+  </header>
+
+  <main class="content-wrap">
+    <div class="container">
+      <div class="content-card">
+
+        <nav class="toc" aria-label="Table of contents">
+          <p class="toc-title">Contents</p>
+          <ol>
+            <li><a href="#t1">Acceptance of Terms</a></li>
+            <li><a href="#t2">Description of Service</a></li>
+            <li><a href="#t3">Account Registration</a></li>
+            <li><a href="#t4">Subscriptions &amp; Payments</a></li>
+            <li><a href="#t5">Acceptable Use</a></li>
+            <li><a href="#t6">Intellectual Property</a></li>
+            <li><a href="#t7">Content &amp; Third-Party Books</a></li>
+            <li><a href="#t8">Disclaimers &amp; Limitation of Liability</a></li>
+            <li><a href="#t9">Termination</a></li>
+            <li><a href="#t10">Changes to These Terms</a></li>
+            <li><a href="#t11">Governing Law</a></li>
+            <li><a href="#t12">Contact Us</a></li>
+          </ol>
+        </nav>
+
+        <p style="font-size:0.95rem;color:#2e3533;margin:0 0 2rem;">
+          These Terms &amp; Conditions ("Terms") govern your access to and use of the <strong>Eduba</strong> mobile application and related services (collectively, the "Service"). Please read them carefully. By downloading, installing, or using Eduba you agree to be bound by these Terms. If you do not agree, do not use the app.
+        </p>
+
+        <div class="section-block" id="t1">
+          <h2><span class="section-num">1</span> Acceptance of Terms</h2>
+          <p>By creating an account or using the Service, you confirm that you are at least 13 years old (or 16 in the EEA), that you have read and understood these Terms, and that you have the legal capacity to enter into a binding agreement. If you use Eduba on behalf of an organization, you represent that you are authorized to bind that organization to these Terms.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="t2">
+          <h2><span class="section-num">2</span> Description of Service</h2>
+          <p>Eduba is a mobile learning application that offers:</p>
+          <ul>
+            <li>A digital bookstore to browse and access educational books.</li>
+            <li>Smart flashcard reviews to help you retain what you read.</li>
+            <li>Progress tracking, streaks, and personalized review scheduling.</li>
+            <li>Optional premium subscriptions for full content access.</li>
+          </ul>
+          <p>We reserve the right to modify, update, or discontinue any feature of the Service at any time without prior notice.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="t3">
+          <h2><span class="section-num">3</span> Account Registration</h2>
+          <p>To use most features you must create an account with a valid email address and password. You agree to:</p>
+          <ul>
+            <li>Provide accurate and complete registration information.</li>
+            <li>Keep your password confidential and not share it with anyone.</li>
+            <li>Notify us immediately at <a href="mailto:m.j.h.a.e.w@gmail.com">m.j.h.a.e.w@gmail.com</a> if you suspect unauthorized access to your account.</li>
+            <li>Be responsible for all activities that occur under your account.</li>
+          </ul>
+          <p>We reserve the right to suspend or terminate accounts that violate these Terms.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="t4">
+          <h2><span class="section-num">4</span> Subscriptions &amp; Payments</h2>
+          <p><strong>Free tier.</strong> Eduba offers a free tier with limited access to content and features.</p>
+          <p><strong>Premium subscription.</strong> A paid subscription unlocks full access to the book library and all features. Subscription fees are displayed in the app before purchase.</p>
+          <p><strong>Billing.</strong> Subscriptions are billed through Apple App Store or Google Play. All billing, renewals, and payment processing are governed by the respective store's terms.</p>
+          <p><strong>Auto-renewal.</strong> Subscriptions automatically renew at the end of each billing period unless you cancel at least 24 hours before the renewal date through your App Store or Google Play account settings.</p>
+          <div class="highlight-box">
+            <strong>Refunds:</strong> We do not offer refunds directly. Refund requests must be submitted to Apple or Google through their standard refund processes.
+          </div>
+          <p><strong>Price changes.</strong> We may change subscription prices with reasonable advance notice. Continued use after a price change takes effect constitutes acceptance of the new price.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="t5">
+          <h2><span class="section-num">5</span> Acceptable Use</h2>
+          <p>You agree not to:</p>
+          <ul>
+            <li>Copy, reproduce, or distribute any content from the app without permission.</li>
+            <li>Attempt to reverse-engineer, decompile, or tamper with the app.</li>
+            <li>Use the Service for any illegal or unauthorized purpose.</li>
+            <li>Share your account credentials or allow others to access the Service through your account.</li>
+            <li>Upload or transmit any malicious code, spam, or harmful content.</li>
+            <li>Circumvent, disable, or interfere with security features of the Service.</li>
+            <li>Scrape, crawl, or extract data from the app by automated means.</li>
+          </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="t6">
+          <h2><span class="section-num">6</span> Intellectual Property</h2>
+          <p>All content, features, and functionality of Eduba — including but not limited to the app design, logo, text, graphics, flashcard system, and underlying code — are owned by or licensed to Eduba and protected by applicable intellectual property laws.</p>
+          <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use the app for your personal, non-commercial learning purposes in accordance with these Terms.</p>
+          <p>Nothing in these Terms transfers any ownership rights to you.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="t7">
+          <h2><span class="section-num">7</span> Content &amp; Third-Party Books</h2>
+          <p>Books and learning materials available in Eduba are provided by publishers and content partners. Access is subject to their licensing terms. We make no guarantees about the completeness, accuracy, or fitness for purpose of any third-party content.</p>
+          <p>We are not responsible for the views expressed in books available through the Service.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="t8">
+          <h2><span class="section-num">8</span> Disclaimers &amp; Limitation of Liability</h2>
+          <p><strong>As-is service.</strong> The Service is provided "as is" and "as available" without warranties of any kind, express or implied, including fitness for a particular purpose or uninterrupted availability.</p>
+          <p><strong>No guarantee of results.</strong> We do not guarantee that using Eduba will result in any specific learning outcome.</p>
+          <p><strong>Limitation of liability.</strong> To the fullest extent permitted by law, Eduba and its operators shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of or inability to use the Service, even if we have been advised of the possibility of such damages.</p>
+          <p>Our total liability for any claim arising from these Terms or the Service shall not exceed the amount you paid us in the 12 months preceding the claim, or USD $10, whichever is greater.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="t9">
+          <h2><span class="section-num">9</span> Termination</h2>
+          <p><strong>By you.</strong> You may stop using the Service and delete your account at any time.</p>
+          <p><strong>By us.</strong> We may suspend or terminate your access immediately, without notice, if you violate these Terms or if we discontinue the Service.</p>
+          <p>Upon termination, your right to use the Service ceases. Sections relating to intellectual property, disclaimers, limitation of liability, and governing law survive termination.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="t10">
+          <h2><span class="section-num">10</span> Changes to These Terms</h2>
+          <p>We may revise these Terms at any time. When we do, we will update the "Last updated" date and, for material changes, notify you via in-app notice or email at least 7 days before the changes take effect. Continued use of the Service after that date means you accept the updated Terms.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="t11">
+          <h2><span class="section-num">11</span> Governing Law</h2>
+          <p>These Terms are governed by the laws applicable in the jurisdiction where Eduba operates. Any disputes shall first be attempted to be resolved amicably by contacting us directly. If unresolved, disputes shall be subject to the exclusive jurisdiction of the competent courts in that jurisdiction.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section-block" id="t12">
+          <h2><span class="section-num">12</span> Contact Us</h2>
+          <p>For any questions, complaints, or notices regarding these Terms, please contact us:</p>
+          <div class="contact-box">
+            <p><strong>Eduba Support</strong></p>
+            <p>📧 Email: <a href="mailto:m.j.h.a.e.w@gmail.com">m.j.h.a.e.w@gmail.com</a></p>
+            <p>💬 WhatsApp: <a href="https://wa.me/9647841353732">+964 784 135 3732</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html" aria-current="page">Terms &amp; Conditions</a>
+      </div>
+      <p><strong>Eduba</strong> · Flashcard learning with a built-in bookstore</p>
+      <p>&copy; <span id="year"></span> Eduba. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
