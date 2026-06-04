@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Request deletion of your Eduba account and associated data." />
+  <title>Delete Account — Eduba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal: #1a7a6e;
+      --teal-dark: #0f4d45;
+      --teal-mid: #156b61;
+      --text: #1a1f1e;
+      --text-muted: #5c6664;
+      --bg: #f4f8f7;
+      --white: #ffffff;
+      --radius: 16px;
+      --radius-lg: 24px;
+      --shadow: 0 12px 40px rgba(26, 122, 110, 0.12);
+      --font: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(780px, 100% - 2rem);
+      margin-inline: auto;
+    }
+
+    .topbar {
+      background: linear-gradient(155deg, var(--teal) 0%, var(--teal-mid) 45%, var(--teal-dark) 100%);
+      color: #fff;
+      padding: 1rem 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .topbar-logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .topbar-back {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .topbar-back:hover { color: #fff; text-decoration: none; }
+
+    .page-hero {
+      background: linear-gradient(155deg, var(--teal) 0%, var(--teal-mid) 45%, var(--teal-dark) 100%);
+      color: #fff;
+      padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(3rem, 7vw, 5rem);
+      text-align: center;
+    }
+
+    .page-hero-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 2.75rem);
+      font-weight: 800;
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .page-hero-meta {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      margin: 0;
+      max-width: 36ch;
+      margin-inline: auto;
+    }
+
+    .content-wrap {
+      padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(3rem, 6vw, 5rem);
+    }
+
+    .content-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.75rem, 4vw, 3rem);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(26, 122, 110, 0.08);
+    }
+
+    .intro {
+      font-size: 0.95rem;
+      color: #2e3533;
+      margin: 0 0 2rem;
+    }
+
+    .section-block {
+      margin-bottom: 2rem;
+    }
+
+    .section-block:last-of-type { margin-bottom: 0; }
+
+    .section-block h2 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--teal-dark);
+      margin: 0 0 0.65rem;
+    }
+
+    .section-block p,
+    .section-block li {
+      font-size: 0.95rem;
+      color: #2e3533;
+      margin: 0 0 0.65rem;
+    }
+
+    .section-block ul {
+      margin: 0;
+      padding-left: 1.35rem;
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .note-box {
+      background: rgba(224, 123, 58, 0.08);
+      border: 1px solid rgba(224, 123, 58, 0.25);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      color: #2e3533;
+    }
+
+    .note-box strong { color: var(--teal-dark); }
+
+    .request-form {
+      margin-top: 1.25rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .field label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--teal-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .field input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-family: var(--font);
+      font-size: 0.95rem;
+      border: 1px solid rgba(26, 122, 110, 0.25);
+      border-radius: 12px;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .field input:focus {
+      outline: 2px solid rgba(26, 122, 110, 0.35);
+      outline-offset: 1px;
+      border-color: var(--teal);
+    }
+
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.5rem;
+      font-family: var(--font);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-mid) 100%);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+
+    .btn-submit:hover { opacity: 0.92; }
+    .btn-submit:active { transform: scale(0.98); }
+
+    .form-hint {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .contact-alt {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(26, 122, 110, 0.1);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .footer {
+      padding: 2rem 0 2.5rem;
+      border-top: 1px solid rgba(26, 122, 110, 0.12);
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--teal);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .footer strong { color: var(--text); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar" aria-label="Site navigation">
+    <div class="container topbar-inner">
+      <a href="index.html" class="topbar-logo">Eduba</a>
+      <a href="index.html" class="topbar-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        Back to home
+      </a>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <span class="page-hero-badge">Account</span>
+      <h1>Delete your account</h1>
+      <p class="page-hero-meta">Request permanent removal of your Eduba account and personal data.</p>
+    </div>
+  </header>
+
+  <main class="content-wrap">
+    <div class="container">
+      <div class="content-card">
+
+        <p class="intro">
+          You can delete your Eduba account at any time. Send a request from the email address linked to your account. We usually process requests within <strong>30 days</strong>.
+        </p>
+
+        <div class="note-box">
+          <strong>Active subscription?</strong> Cancel your subscription in the <a href="https://apps.apple.com/account/subscriptions">Apple App Store</a> or <a href="https://play.google.com/store/account/subscriptions">Google Play</a> before or after deleting your account. Deleting your Eduba account does not cancel store billing automatically.
+        </div>
+
+        <div class="section-block">
+          <h2>What we delete</h2>
+          <ul>
+            <li>Your profile (name, email, and account credentials)</li>
+            <li>Library, flashcards, progress, and streak data tied to your account</li>
+            <li>App usage data stored for your account</li>
+          </ul>
+          <p>We may keep minimal records only where required by law (for example, payment or fraud-related logs from app stores).</p>
+        </div>
+
+        <div class="section-block">
+          <h2>Request deletion</h2>
+          <p>Enter the email you use to sign in to Eduba. Your email app will open with a pre-filled message — send it to complete your request.</p>
+
+          <form class="request-form" id="delete-form" novalidate>
+            <div class="field">
+              <label for="account-email">Account email</label>
+              <input type="email" id="account-email" name="email" required autocomplete="email" placeholder="you@example.com" />
+            </div>
+            <button type="submit" class="btn-submit">Send deletion request</button>
+            <p class="form-hint">We will confirm by email once your account has been deleted.</p>
+          </form>
+
+          <p class="contact-alt">
+            Prefer to write yourself? Email <a href="mailto:m.j.h.a.e.w@gmail.com?subject=Eduba%20account%20deletion%20request">m.j.h.a.e.w@gmail.com</a> from your account email with the subject <strong>Eduba account deletion request</strong>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="delete-account.html" aria-current="page">Delete Account</a>
+      </div>
+      <p><strong>Eduba</strong> · Flashcard learning with a built-in bookstore</p>
+      <p>&copy; <span id="year"></span> Eduba. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const SUPPORT_EMAIL = "m.j.h.a.e.w@gmail.com";
+
+    document.getElementById("delete-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = document.getElementById("account-email").value.trim();
+      if (!email) return;
+
+      const subject = "Eduba account deletion request";
+      const body = [
+        "Please delete my Eduba account and associated personal data.",
+        "",
+        "Account email: " + email,
+        "",
+        "I understand this action is permanent."
+      ].join("\n");
+
+      window.location.href =
+        "mailto:" + SUPPORT_EMAIL +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>
